@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #212121;
+    background: #eee;
+    line-height: 1.3rem;
+}
+
+
+/** Globals **/
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    width: 100%;
+    height: 600px;
+    padding: 15px;
+    display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+}
+
+.error-message {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.error-message p {
+    color: red;
+}
+
+.error-message.active {
+    display: block;
+}
+
+
+.section-app {
+    padding: 60px 0;
+}
+
+/** App **/
+.app-form {
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.37);
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+
+.input-group input { 
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #eee;
+    margin-top: 15px;
+    font-family: inherit;
+}
+
+.input-group input[type='submit'] {
+    cursor: pointer;
+    background: #1b91e3;
+    color: #fff;
+}
+
+
+/** Location **/
+
+.loading-image-wrapper {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.loading-image-wrapper.active {
+    display: block;
+}
+
+.loading-image-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+.results {
+    padding: 30px;
+    width: 100%;
+    position: relative;
+    background: #fff;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.37);
+}
+
+.location {
+    padding: 15px;
+    display: block;
+    margin-bottom: 20px;
+    background: #C272E6;
+    color: #fff;
+}
+
+.location p {
+    margin-bottom: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+/** Map **/
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+
+/** Media Queries **/
+
+@media screen and (min-width: 768px) {
+    .wrapper { 
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .app-form {
+        width: 40%;
+        margin-bottom: 0px;
+    }
+
+    .results {
+        width: 55%;
+    }
+   
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Postcode App</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="container__wrapper">
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="section-app">
+        <div class="container">
+            <div class="wrapper">
+                <div class="app-form">
+                    <form id="app-form">
+                        <div class="heading">
+                            <h2>Postcode App</h2>
+                        </div>
+                        <div class="error-message">
+                            <p></p>
+                        </div>
+                        <div class="error-message input">
+                            <p>You must provide postcode</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="postcode-input"></label>
+                            <input id="postcode-input" type="text">
+                            <span class=''></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" placeholder="submit">
+                        </div>
+                    </form>
+                </div>
+                <div class="results">
+                    <h2>Location</h2>
+                    <div class="loading-image-wrapper">
+                        <img src="./assets/images/loading.gif" alt="loading icon">
+                    </div>
+                    <div class="location-wrapper"></div>
+                    <div id="map"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTzD_VMHRRZPJvxdwPh7LrpPhkq__NCPU"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>
