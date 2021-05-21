@@ -1,5 +1,19 @@
 import { api } from './config.js';
 
+
+window.onload = () => {
+    const coordinates = {
+        lat: 55.3781,
+        lng: -3.4360
+    }
+    
+    const map = new google.maps.Map(document.getElementById('map'), {
+        center: coordinates,
+        zoom: 6
+    });
+}
+
+
 const dom = {
     form: document.querySelector('#app-form'),
     postcodeInput: document.querySelector('#postcode-input'),
@@ -11,15 +25,6 @@ const dom = {
     loadingIcon: document.querySelector('.loading-image-wrapper ')
 }
 
-const coordinates = {
-    lat: 55.3781,
-    lng: -3.4360
-}
-
-const map = new google.maps.Map(document.getElementById('map'), {
-    center: coordinates,
-    zoom: 6
-});
 
 let currentPostcode = '';
 
