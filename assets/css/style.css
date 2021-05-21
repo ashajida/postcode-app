@@ -78,11 +78,17 @@ h1, h2 {
     font-size: 1rem;
     outline: none;
     border: 1px solid #eee;
-    margin-top: 15px;
+    margin-bottom: 15px;
     font-family: inherit;
 }
 
-.input-group input[type='submit'] {
+.input-group button {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
     cursor: pointer;
     background: #1b91e3;
     color: #fff;
