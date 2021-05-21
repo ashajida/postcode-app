@@ -46,6 +46,13 @@ const getPostcode = async (request) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const postcode = dom.postcodeInput.value;
+
+    if(dom.postcodeInput.value.length == 0) {
+        dom.inputErrorMessage.classList.add('active');
+        return;
+    } else {
+        dom.inputErrorMessage.classList.remove('active');
+    }
    
     // Only make an api call on a new postcode
     if(currentPostcode == postcode) {
@@ -57,13 +64,6 @@ const handleSubmit = async (e) => {
     const { result } = response;
 
     if(document.querySelector('.location') !== null) document.querySelector('.location').remove();
-
-    if(dom.postcodeInput.value.length == 0) {
-        dom.inputErrorMessage.classList.add('active');
-        return;
-    } else {
-        dom.inputErrorMessage.classList.remove('active');
-    }
 
     if(response.status !== 200) {
         dom.errorMessage.classList.add('active');
