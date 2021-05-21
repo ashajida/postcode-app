@@ -69,6 +69,7 @@ const handleSubmit = async (e) => {
         dom.errorText.innerText = "";
     }
 
+    dom.postcodeInput.value = '';
 
     dom.results.innerHTML = `
         <div class="location">
