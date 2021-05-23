@@ -87,11 +87,17 @@ h1, h2 {
     width: 100%;
     padding: 20px 15px;
     font-size: 1rem;
+    font-weight: bold;
     outline: none;
     border: none;
     cursor: pointer;
     background: #1b91e3;
     color: #fff;
+    transition: 0.3s;
+}
+
+.input-group button:hover {
+    background: #0685de;
 }
 
 
