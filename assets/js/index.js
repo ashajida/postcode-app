@@ -49,7 +49,6 @@ const handleSubmit = async (e) => {
 
     if(dom.postcodeInput.value.length == 0) {
         dom.inputErrorMessage.classList.add('active');
-        document.querySelector('.location').remove();
         return;
     } else {
         dom.inputErrorMessage.classList.remove('active');
